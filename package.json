@@ -1,0 +1,44 @@
+{
+  "name": "import-sort-style-python",
+  "description": "Group and sort imports by module, specifically `@ember`-scoped modules",
+  "license": "ISC",
+  "author": "Jeff <rustyangel@gmail.com> (https://tidaltheory.co)",
+  "homepage": "https://github.com/stormwarning/import-sort-style-python",
+  "repository": "stormwarning/import-sort-style-python",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "microbundle",
+    "precommit": "lint-staged && npm test",
+    "dev": "microbundle watch",
+    "lint": "prettier-eslint '**/*.{js,ts}' --list-different",
+    "prepublish": "npm run build",
+    "test": "npm run lint"
+  },
+  "dependencies": {
+    "import-sort-style": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^10.10.1",
+    "@zazen/eslint-config": "^0.3.0",
+    "eslint-plugin-typescript": "^0.12.0",
+    "lint-staged": "^7.2.2",
+    "microbundle": "^0.6.0",
+    "prettier-eslint-cli": "^4.7.1",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.0.3",
+    "typescript-eslint-parser": "^18.0.0",
+    "yorkie": "^2.0.0"
+  },
+  "keywords": [
+    "import-sort-style",
+    "isort",
+    "python"
+  ],
+  "lint-staged": {
+    "*.{js|json}": [
+      "prettier-eslint --list-different",
+      "git add"
+    ]
+  }
+}
