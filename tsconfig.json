@@ -3,7 +3,6 @@
 
   "compilerOptions": {
     "target": "es6",
-    "module": "commonjs",
     "strictNullChecks": true,
     "declaration": true
   }
