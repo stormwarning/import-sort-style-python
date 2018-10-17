@@ -20,8 +20,13 @@ Framework and First-party require setting some options in your config:
     "parser": "babylon",
     "style": "python",
     "options": {
-      "knownFramework": [],
-      "knownFirstparty": []
+      "knownFramework": [
+        "@ember",
+        "@glimmer"
+      ],
+      "knownFirstparty": [
+        "my-project"
+      ]
     }
   },
 }
