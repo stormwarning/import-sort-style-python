@@ -36,7 +36,9 @@ export default function (
         naturally,
         unicode,
     } = styleApi
-    const { knownFramework, knownFirstparty } = options
+
+    let knownFramework = options.knownFramework || []
+    let knownFirstparty = options.knownFirstparty || []
 
     function isFrameworkModule (imported: IImport) {
         return knownFramework.some((prefix) =>
