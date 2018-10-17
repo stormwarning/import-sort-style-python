@@ -5,11 +5,9 @@
 
 All notable changes to this project will be documented in this file.
 
-<!--
-## 0.1.0 — 2018-09-19
+## 0.1.0 — 2018-10-16
 
 ### 🎉 Initial project release
--->
 
 [img-changelog]: https://img.shields.io/badge/keep-a%20changelog-ef5e39.svg?style=flat-square
 
