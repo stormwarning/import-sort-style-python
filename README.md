@@ -10,7 +10,22 @@ A style for [import-sort][] that groups and sorts imports by module, inspired by
 2. Framework modules
 3. Third-party modules
 4. First-party modules
-5. Explicity local modules
+5. Explicitly local modules
+
+Framework and First-party require setting some options in your config:
+
+```json
+"importSort": {
+  ".js": {
+    "parser": "babylon",
+    "style": "python",
+    "options": {
+      "known-framework": [],
+      "known-firstparty": []
+    }
+  },
+}
+```
 
 [npm-url]: https://www.npmjs.com/package/import-sort-style-python
 
