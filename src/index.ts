@@ -18,7 +18,11 @@ interface IImport {
     namedMembers: NamedMember[]
 }
 
-export default function (styleApi: IStyleAPI, options?: any): Array<IStyleItem> {
+export default function (
+    styleApi: IStyleAPI,
+    file?: string,
+    options?: any,
+): Array<IStyleItem> {
     const {
         alias,
         and,
@@ -35,14 +39,14 @@ export default function (styleApi: IStyleAPI, options?: any): Array<IStyleItem> 
     const { knownFramework, knownFirstparty } = options
 
     function isFrameworkModule (imported: IImport) {
-        return knownFramework.map((module) =>
-            imported.moduleName.startsWith(module),
+        return knownFramework.some((prefix) =>
+            imported.moduleName.startsWith(prefix),
         )
     }
 
     function isFirstPartyModule (imported: IImport) {
-        return knownFirstparty.map((module) =>
-            imported.moduleName.startsWith(module),
+        return knownFirstparty.some((prefix) =>
+            imported.moduleName.startsWith(prefix),
         )
     }
 
@@ -74,10 +78,14 @@ export default function (styleApi: IStyleAPI, options?: any): Array<IStyleItem> 
 
         /**
          * Known framework modules.
-         * @example import … from '@ember/foo'
+         * @example import … from '@scope/foo'
          */
         {
-            match: isFrameworkModule,
+            match: and(
+                isAbsoluteModule,
+                isFrameworkModule,
+                not(isFirstPartyModule),
+            ),
             sort: moduleName(naturally),
             sortNamedMembers: alias(unicode),
         },
@@ -100,10 +108,14 @@ export default function (styleApi: IStyleAPI, options?: any): Array<IStyleItem> 
 
         /**
          * Known first-party modules.
-         * @example import … from '@ember/foo'
+         * @example import … from 'project/foo'
          */
         {
-            match: isFirstPartyModule,
+            match: and(
+                isAbsoluteModule,
+                isFirstPartyModule,
+                not(isFrameworkModule),
+            ),
             sort: moduleName(naturally),
             sortNamedMembers: alias(unicode),
         },
