@@ -1,5 +1,23 @@
 import { IStyleAPI, IStyleItem } from 'import-sort-style'
 
+declare type ImportType = 'import' | 'require' | 'import-equals' | 'import-type'
+declare type NamedMember = {
+    name: string
+    alias: string
+}
+
+interface IImport {
+    start: number
+    end: number
+    importStart?: number
+    importEnd?: number
+    type: ImportType
+    moduleName: string
+    defaultMember?: string
+    namespaceMember?: string
+    namedMembers: NamedMember[]
+}
+
 export default function (styleApi: IStyleAPI, options?: any): Array<IStyleItem> {
     const {
         alias,
@@ -14,10 +32,19 @@ export default function (styleApi: IStyleAPI, options?: any): Array<IStyleItem> 
         naturally,
         unicode,
     } = styleApi
+    const { knownFramework, knownFirstparty } = options
 
-    function isFrameworkModule () {}
+    function isFrameworkModule (imported: IImport) {
+        return knownFramework.map((module) =>
+            imported.moduleName.startsWith(module),
+        )
+    }
 
-    // function isFirstPartyModule() {}
+    function isFirstPartyModule (imported: IImport) {
+        return knownFirstparty.map((module) =>
+            imported.moduleName.startsWith(module),
+        )
+    }
 
     return [
         /**

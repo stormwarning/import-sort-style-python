@@ -20,8 +20,8 @@ Framework and First-party require setting some options in your config:
     "parser": "babylon",
     "style": "python",
     "options": {
-      "known-framework": [],
-      "known-firstparty": []
+      "knownFramework": [],
+      "knownFirstparty": []
     }
   },
 }
