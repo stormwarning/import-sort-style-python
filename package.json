@@ -9,7 +9,6 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "microbundle",
-    "precommit": "lint-staged && npm test",
     "dev": "microbundle watch",
     "lint": "prettier-eslint '**/*.{js,ts}' --ignore 'dist/**' --list-different",
     "prepublishOnly": "npm run build",
