@@ -13,17 +13,15 @@
     "dev": "microbundle watch",
     "lint": "prettier-eslint '**/*.{js,ts}' --ignore 'dist/**' --list-different",
     "prepublishOnly": "npm run build",
-    "semantic-release": "semantic-release",
-    "test": "npm run lint",
-    "travis-deploy-once": "travis-deploy-once"
+    "test": "npm run lint"
   },
   "dependencies": {
     "import-sort-style": "^5.0.0"
   },
   "devDependencies": {
     "@types/node": "^10.10.1",
-    "@zazen/conventional-changelog": "^0.1.1",
     "@zazen/eslint-config": "^0.3.0",
+    "@zazen/semantic-release": "^0.1.1",
     "eslint": "^5.7.0",
     "eslint-plugin-typescript": "^0.12.0",
     "lint-staged": "^7.2.2",
@@ -48,6 +46,6 @@
     ]
   },
   "release": {
-    "config": "@zazen/conventional-changelog"
+    "extends": "@zazen/semantic-release"
   }
 }
