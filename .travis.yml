@@ -8,7 +8,7 @@ node_js:
     - '10'
     - '8'
 after_success:
-    - npx run travis-deploy-once "npx run semantic-release"
+    - npx travis-deploy-once "npx semantic-release"
 branches:
     except:
         - /^v\d+\.\d+\.\d+$/
