@@ -30,7 +30,7 @@
     "semantic-release": "^15.10.5",
     "travis-deploy-once": "^5.0.9",
     "ts-node": "^7.0.1",
-    "typescript": "~3.1.1",
+    "typescript": "~3.5.1",
     "typescript-eslint-parser": "^20.0.0"
   },
   "keywords": [
