@@ -15,7 +15,7 @@
     "test": "npm run lint"
   },
   "dependencies": {
-    "import-sort-style": "^5.0.0"
+    "import-sort-style": "^6.0.0"
   },
   "devDependencies": {
     "@types/node": "^10.10.1",
