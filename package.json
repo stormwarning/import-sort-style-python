@@ -18,20 +18,20 @@
     "import-sort-style": "^6.0.0"
   },
   "devDependencies": {
-    "@types/node": "^10.10.1",
-    "@zazen/eslint-config": "^0.3.0",
+    "@types/node": "^12.0.8",
+    "@zazen/eslint-config": "^1.0.0",
     "@zazen/semantic-release": "^0.1.1",
     "eslint": "^5.7.0",
-    "eslint-plugin-typescript": "^0.12.0",
-    "husky": "^1.1.3",
+    "eslint-plugin-typescript": "^0.14.0",
+    "husky": "^2.4.1",
     "lint-staged": "^7.2.2",
-    "microbundle": "^0.6.0",
+    "microbundle": "^0.11.0",
     "prettier-eslint-cli": "^4.7.1",
-    "semantic-release": "^15.10.5",
-    "travis-deploy-once": "^5.0.9",
+    "semantic-release": "^15.13.16",
+    "travis-deploy-once": "^5.0.11",
     "ts-node": "^7.0.1",
-    "typescript": "~3.1.1",
-    "typescript-eslint-parser": "^20.0.0"
+    "typescript": "~3.5.2",
+    "typescript-eslint-parser": "^22.0.0"
   },
   "keywords": [
     "import-sort-style",
