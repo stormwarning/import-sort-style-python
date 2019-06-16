@@ -5,6 +5,15 @@
 
 All notable changes to this project will be documented in this file.
 
+<a name="0.2.3"></a>
+
+## [0.2.3](https://github.com/stormwarning/import-sort-style-python/compare/v0.2.2...v0.2.3) — 2019-06-16
+
+### Changed
+
+- 👕 Update formatting from new eslint config ([11c6922](https://github.com/stormwarning/import-sort-style-python/commit/11c6922))
+- 📦 Upgrade devDependencies ([#37](https://github.com/stormwarning/import-sort-style-python/issues/37)) ([fed7921](https://github.com/stormwarning/import-sort-style-python/commit/fed7921)), closes [#4](https://github.com/stormwarning/import-sort-style-python/issues/4) [#11](https://github.com/stormwarning/import-sort-style-python/issues/11) [#10](https://github.com/stormwarning/import-sort-style-python/issues/10) [#34](https://github.com/stormwarning/import-sort-style-python/issues/34) [#33](https://github.com/stormwarning/import-sort-style-python/issues/33) [#6](https://github.com/stormwarning/import-sort-style-python/issues/6) [#36](https://github.com/stormwarning/import-sort-style-python/issues/36) [#7](https://github.com/stormwarning/import-sort-style-python/issues/7) [#35](https://github.com/stormwarning/import-sort-style-python/issues/35)
+
 <a name="0.2.2"></a>
 
 ## [0.2.2](https://github.com/stormwarning/import-sort-style-python/compare/v0.2.1...v0.2.2) — 2019-06-15
