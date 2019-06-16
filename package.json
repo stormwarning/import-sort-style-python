@@ -49,6 +49,13 @@
       "git add"
     ]
   },
+  "prettier": {
+    "arrowParens": "always",
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 4,
+    "trailingComma": "all"
+  },
   "release": {
     "extends": "@zazen/semantic-release"
   }

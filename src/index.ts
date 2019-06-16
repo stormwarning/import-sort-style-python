@@ -18,7 +18,7 @@ interface IImport {
     namedMembers: NamedMember[]
 }
 
-export default function (
+export default function(
     styleApi: IStyleAPI,
     file?: string,
     options?: any,
@@ -40,13 +40,13 @@ export default function (
     let knownFramework = options.knownFramework || []
     let knownFirstparty = options.knownFirstparty || []
 
-    function isFrameworkModule (imported: IImport) {
+    function isFrameworkModule(imported: IImport) {
         return knownFramework.some((prefix) =>
             imported.moduleName.startsWith(prefix),
         )
     }
 
-    function isFirstPartyModule (imported: IImport) {
+    function isFirstPartyModule(imported: IImport) {
         return knownFirstparty.some((prefix) =>
             imported.moduleName.startsWith(prefix),
         )
