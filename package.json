@@ -23,7 +23,7 @@
     "@zazen/semantic-release": "^0.1.1",
     "eslint": "^5.7.0",
     "eslint-plugin-typescript": "^0.14.0",
-    "husky": "^2.4.1",
+    "husky": "^2.7.0",
     "lint-staged": "^7.2.2",
     "microbundle": "^0.11.0",
     "prettier-eslint-cli": "^4.7.1",
