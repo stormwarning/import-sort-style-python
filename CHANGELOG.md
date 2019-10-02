@@ -5,6 +5,23 @@
 
 All notable changes to this project will be documented in this file.
 
+<a name="0.2.4"></a>
+
+## [0.2.4](https://github.com/stormwarning/import-sort-style-python/compare/v0.2.3...v0.2.4) — 2019-10-02
+
+### Changed
+
+- 📦 Upgrade devDependencies ([#94](https://github.com/stormwarning/import-sort-style-python/issues/94)) ([6586300](https://github.com/stormwarning/import-sort-style-python/commit/6586300)) \
+  * Upgrade `prettier-eslint-cli` to 5.0.0
+* Upgrade `eslint` to 5.16.0
+* Upgrade `semantic-release` to 15.13.24
+* Upgrade `typescript` to 3.6.3
+* Upgrade `ts-node` to 8.4.1
+* Upgrade `lint-staged` to 9.4.0
+* Upgrade `@types/node` to 12.7.8
+* Upgrade `husky` to 3.0.7
+* Upgrade `lint-staged` to 9.4.1
+
 <a name="0.2.3"></a>
 
 ## [0.2.3](https://github.com/stormwarning/import-sort-style-python/compare/v0.2.2...v0.2.3) — 2019-06-16
