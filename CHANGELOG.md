@@ -5,6 +5,17 @@
 
 All notable changes to this project will be documented in this file.
 
+<a name="0.2.5"></a>
+
+### [0.2.5](https://github.com/stormwarning/import-sort-style-python/compare/v0.2.4...v0.2.5) — 2020-01-21
+
+#### Changed
+
+- 📦 Upgrade devDependencies ([#153](https://github.com/stormwarning/import-sort-style-python/issues/153)) [[`431c361`](https://github.com/stormwarning/import-sort-style-python/commit/431c361)] \
+  Upgrades all dev packages to their latest, and
+  updates the eslint config to use the new
+  `@typescript-eslint` parser & plugin.
+
 <a name="0.2.4"></a>
 
 ## [0.2.4](https://github.com/stormwarning/import-sort-style-python/compare/v0.2.3...v0.2.4) — 2019-10-02
