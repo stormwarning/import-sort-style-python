@@ -1,3 +1,5 @@
+import path from 'path'
+
 import { IStyleAPI, IStyleItem } from 'import-sort-style'
 
 declare type ImportType = 'import' | 'require' | 'import-equals' | 'import-type'
@@ -41,14 +43,16 @@ export default function(
     let knownFirstparty = options.knownFirstparty || []
 
     function isFrameworkModule(imported: IImport) {
-        return knownFramework.some((prefix) =>
-            imported.moduleName.startsWith(prefix),
+        let [base] = imported.moduleName.split(path.sep)
+        return knownFramework.some((prefix: string) =>
+            RegExp(`${prefix}$`).test(base),
         )
     }
 
     function isFirstPartyModule(imported: IImport) {
-        return knownFirstparty.some((prefix) =>
-            imported.moduleName.startsWith(prefix),
+        let [base] = imported.moduleName.split(path.sep)
+        return knownFirstparty.some((prefix: string) =>
+            RegExp(`${prefix}$`).test(base),
         )
     }
 
