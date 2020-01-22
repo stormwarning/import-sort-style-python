@@ -5,6 +5,25 @@
 
 All notable changes to this project will be documented in this file.
 
+<a name="1.0.0"></a>
+
+## [1.0.0](https://github.com/stormwarning/import-sort-style-python/compare/v0.2.5...v1.0.0) — 2020-01-22
+
+#### Added
+
+- 🎁 Allow RegEx patterns in options ([#155](https://github.com/stormwarning/import-sort-style-python/issues/155)) [[`f325c04`](https://github.com/stormwarning/import-sort-style-python/commit/f325c04)] \
+  Strings in `knownFramework` and `knownFirstparty` option
+  arrays can now include regular expression patterns.
+
+
+### BREAKING CHANGES
+
+- Options are now matched against only the first part of
+the module path (i.e. up to the first `/`). This means 
+something like `myapp` in `knownFirstparty` will match
+`'myapp/subdir/foo'` but not `'myapp-addon/lib'`, where
+previously it would have.
+
 <a name="0.2.5"></a>
 
 ### [0.2.5](https://github.com/stormwarning/import-sort-style-python/compare/v0.2.4...v0.2.5) — 2020-01-21
