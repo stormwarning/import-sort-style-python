@@ -42,18 +42,24 @@ export default function(
     let knownFramework = options.knownFramework || []
     let knownFirstparty = options.knownFirstparty || []
 
+    /**
+     * Transforms the option string to JSON and back again, so that
+     * RegExp escapes are maintained.
+     */
+    function moduleMatchesOption(module, option) {
+        let [base] = module.split(path.sep)
+        return [option].some((opt: string) => {
+            let pattern = JSON.parse(`{"regex": ${JSON.stringify(opt)}}`)
+            return RegExp(`${pattern}$`).test(base)
+        })
+    }
+
     function isFrameworkModule(imported: IImport) {
-        let [base] = imported.moduleName.split(path.sep)
-        return knownFramework.some((prefix: string) =>
-            RegExp(`${prefix}$`).test(base),
-        )
+        return moduleMatchesOption(imported.moduleName, knownFramework)
     }
 
     function isFirstPartyModule(imported: IImport) {
-        let [base] = imported.moduleName.split(path.sep)
-        return knownFirstparty.some((prefix: string) =>
-            RegExp(`${prefix}$`).test(base),
-        )
+        return moduleMatchesOption(imported.moduleName, knownFirstparty)
     }
 
     return [
