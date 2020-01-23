@@ -5,6 +5,14 @@
 
 All notable changes to this project will be documented in this file.
 
+<a name="1.0.1"></a>
+
+### [1.0.1](https://github.com/stormwarning/import-sort-style-python/compare/v1.0.0...v1.0.1) — 2020-01-23
+
+#### Fixed
+
+- 🐛 Allow RegExp escape characters in options ([#158](https://github.com/stormwarning/import-sort-style-python/issues/158)) [[`1c4c2bc`](https://github.com/stormwarning/import-sort-style-python/commit/1c4c2bc)]
+
 <a name="1.0.0"></a>
 
 ## [1.0.0](https://github.com/stormwarning/import-sort-style-python/compare/v0.2.5...v1.0.0) — 2020-01-22
