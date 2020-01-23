@@ -48,9 +48,9 @@ export default function(
      */
     function moduleMatchesOption(module, option) {
         let [base] = module.split(path.sep)
-        return [option].some((opt: string) => {
+        return option.some((opt: string) => {
             let pattern = JSON.parse(`{"regex": ${JSON.stringify(opt)}}`)
-            return RegExp(`${pattern}$`).test(base)
+            return RegExp(`${pattern.regex}$`).test(base)
         })
     }
 
