@@ -19,7 +19,7 @@
     "import-sort-style": "6.0.0"
   },
   "devDependencies": {
-    "@types/node": "13.1.x",
+    "@types/node": "13.13.x",
     "@typescript-eslint/eslint-plugin": "2.17.x",
     "@typescript-eslint/parser": "2.17.x",
     "@zazen/eslint-config": "2.0.x",
